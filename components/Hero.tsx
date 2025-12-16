@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Frame Dot */}
-        <div className="absolute top-[52%] right-[38%] hidden md:block">
+        <div className="absolute top-[52%] right-[34%] hidden md:block">
           <div className="w-5 h-5 rounded-full bg-[#ff6b35] border-[3px] border-white"></div>
         </div>
 
