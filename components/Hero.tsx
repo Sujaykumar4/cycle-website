@@ -4,86 +4,86 @@ import hero2 from "../src/images/hero2.jpeg";
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative w-full h-screen min-h-[600px] overflow-hidden bg-black text-white flex flex-col justify-center">
+    <section className="relative w-full h-[110vh] min-h-[700px] overflow-hidden bg-black text-white">
 
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroSection}
           alt="Hero Bike Background"
-          className="w-full h-full object-cover object-[center_30%] brightness-75 contrast-105"
+          className="w-full h-full object-cover object-[45%_center] lg:object-center transform translate-y-20"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
       </div>
 
       {/* Main Content Container */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col justify-center h-full">
+      <div className="relative z-10 w-full h-full">
 
-        {/* Title Section */}
-        <div className="mb-8 md:mb-0">
-          <div className="flex items-center gap-4 mb-2">
-            <div className="h-[2px] w-8 md:w-12 bg-white/80"></div>
-            <h3 className="uppercase font-bold text-[3vw] md:text-base tracking-[0.35em] text-white">
+        {/* Title Section - Top Left */}
+        <div className="absolute top-[15%] left-[6%] lg:top-[12%] lg:left-[11%]">
+          <div className="flex items-center gap-3 mb-3 justify-start lg:justify-end">
+            <div className="h-[2px] w-16 lg:w-32 bg-white"></div>
+            <h3 className="uppercase font-extrabold text-xs lg:text-sm tracking-[0.2em] lg:tracking-[0.3em] text-white whitespace-nowrap">
               Let's Ride The
             </h3>
           </div>
 
-          <h1 className="font-display italic font-extrabold text-white text-[13vw] md:text-7xl lg:text-8xl leading-none tracking-wider drop-shadow-2xl">
+          <h1 className="font-display italic font-black text-white text-[42px] md:text-[50px] lg:text-[70px] leading-none tracking-wide drop-shadow-2xl ml-2 lg:ml-24">
             ADVANTURE
           </h1>
         </div>
 
-        {/* Feature Dots (Hidden on small mobile, visible on md+) */}
-        {/* Seat Dot */}
-        <div className="absolute top-[17.7%] right-[13.4%] hidden md:flex items-center gap-4">
-          <div className="w-5 h-5 rounded-full bg-[#ff6b35] border-[3px] border-white relative">
-            <div className="absolute -inset-1.5 rounded-full border border-white/20"></div>
-          </div>
-          <div className="w-20 h-[2px] bg-white/90"></div>
-          <div className="uppercase font-bold text-xs tracking-widest">Protection</div>
+        {/* Feature Dots */}
+        {/* Seat Dot - Top Right */}
+        <div className="hidden lg:flex absolute top-[28%] right-[12%] items-center gap-4">
+          <div className="w-5 h-5 rounded-full bg-white border-[4px] border-[#ff6b35]"></div>
+          <div className="w-40 h-[2px] bg-white"></div>
+          <div className="uppercase font-bold text-xs tracking-[0.3em] whitespace-nowrap">Protection</div>
         </div>
 
-        {/* Frame Dot */}
-        <div className="absolute top-[51%] right-[36.1%] hidden md:block">
-          <div className="w-5 h-5 rounded-full bg-[#ff6b35] border-[3px] border-white"></div>
+        {/* Frame Dot - Center */}
+        <div className="hidden lg:block absolute top-[54%] left-[60.2%]">
+          <div className="w-5 h-5 rounded-full bg-white border-[4px] border-[#ff6b35]"></div>
         </div>
 
-        {/* Wheels Dot */}
-        <div className="absolute bottom-[28.9%] right-[21.9%] hidden md:block">
-          <div className="w-5 h-5 rounded-full bg-[#ff6b35] border-[3px] border-white"></div>
+        {/* Wheels Dot - Bottom Right */}
+        <div className="hidden lg:block absolute bottom-[26.5%] right-[26%]">
+          <div className="w-5 h-5 rounded-full bg-white border-[4px] border-[#ff6b35]"></div>
         </div>
 
+        {/* Mobile: Hidden / Desktop: Bottom Right Text */}
+        <div className="hidden lg:block absolute bottom-[9%] right-[5%] text-left z-20">
+          <h4 className="uppercase font-extrabold text-lg tracking-tight mb-2 text-white">
+            Since It's More
+          </h4>
+          <p className="text-orange-300 text-sm leading-relaxed font-semibold">
+            In general, mountain bike<br />
+            provide more significant<br />
+            protection.
+          </p>
+        </div>
 
-        {/* Feature Boxes */}
-        <div className="absolute bottom-10 left-6 right-6 md:left-12 md:right-12 flex flex-col md:flex-row justify-between items-end gap-6">
-
-          {/* Left Feature Card */}
-          <div className="bg-black/40 backdrop-blur-md border border-white/10 p-3 rounded-xl flex items-center gap-4 max-w-sm">
+        {/* Bottom Feature Card */}
+        <div className="absolute bottom-[5%] left-[5%] right-[5%] lg:bottom-[8%] lg:left-[4%] lg:right-auto lg:w-auto z-20">
+          <div className="bg-black/70 backdrop-blur-sm border border-white/20 px-4 py-4 lg:px-6 lg:py-5 rounded-lg flex items-start gap-3 lg:gap-4 max-w-full lg:max-w-[340px]">
             <img
               src={hero2}
               alt="Cyclist thumb"
-              className="w-16 h-16 rounded-lg object-cover border border-white/10"
+              className="w-[60px] h-[60px] lg:w-[90px] lg:h-[90px] rounded-md object-cover border border-white/20 flex-shrink-0"
             />
             <div>
-              <h4 className="uppercase font-extrabold text-sm tracking-wide">
-                High-Quality Materials
+              <h4 className="uppercase font-extrabold text-sm lg:text-base tracking-tight leading-tight text-white">
+                High-Quality
               </h4>
-              <p className="text-gray-300 text-xs mt-1">
-                Premium materials and advanced build for lasting durability.
+              <h4 className="uppercase font-extrabold text-sm lg:text-base tracking-tight leading-tight text-white mb-2">
+                Materials ----
+              </h4>
+              <p className="text-gray-300 text-[10px] lg:text-xs leading-relaxed">
+                Premium materials and<br />
+                advanced build for<br />
+                lasting durability.
               </p>
             </div>
           </div>
-
-          {/* Right Text (Hidden on very small screens) */}
-          <div className="hidden md:block text-left max-w-xs text-gray-200">
-            <h4 className="uppercase font-bold text-sm">Since It's More</h4>
-            <p className="text-xs mt-1 leading-relaxed">
-              In general, mountain bike<br />
-              provide more significant<br />
-              protection.
-            </p>
-          </div>
-
         </div>
 
       </div>
